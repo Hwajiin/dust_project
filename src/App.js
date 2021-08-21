@@ -3,6 +3,7 @@ import { GEO_API_KEY, fineDustApi } from "./api";
 import axios from "axios";
 import { cityName } from "./cityName";
 import Data from "./components/Data";
+import Loader from "./components/Loader";
 
 class App extends React.Component {
   state = {
@@ -57,7 +58,7 @@ class App extends React.Component {
     return (
       <>
         {isLoading ? (
-          <div>Loading...</div>
+          <Loader />
         ) : (
           <Data
             datatime={datatime}
